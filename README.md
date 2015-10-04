@@ -1,5 +1,5 @@
-Arduino Simon Says
-==================
+Arduino Simon
+=============
 
 ## IDE
 
