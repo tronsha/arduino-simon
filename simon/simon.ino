@@ -18,18 +18,28 @@ void setup() {
   pinMode(pinLedC, OUTPUT);
   pinMode(pinLedD, OUTPUT);
   digitalWrite(pinLedA, HIGH);
-  digitalWrite(pinLedB, HIGH);
-  digitalWrite(pinLedC, HIGH);
-  digitalWrite(pinLedD, HIGH);
-  tone(pinSpeaker, 262, 500);
-  delay(500);
+  tone(pinSpeaker, 329.628, 1000);
+  delay(1000);
   noTone(pinSpeaker);
   digitalWrite(pinLedA, LOW);
+  digitalWrite(pinLedB, HIGH);
+  tone(pinSpeaker, 440, 1000);
+  delay(1000);
+  noTone(pinSpeaker);
   digitalWrite(pinLedB, LOW);
+  digitalWrite(pinLedC, HIGH);
+  tone(pinSpeaker, 554.365, 1000);
+  delay(1000);
+  noTone(pinSpeaker);
   digitalWrite(pinLedC, LOW);
+  digitalWrite(pinLedD, HIGH);
+  tone(pinSpeaker, 659.255, 1000);
+  delay(1000);
+  noTone(pinSpeaker);
   digitalWrite(pinLedD, LOW);
 }
 
 void loop() {
 
 }
+
