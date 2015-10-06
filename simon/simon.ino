@@ -1,13 +1,13 @@
-int blue = 0;
-int yellow = 1;
-int red = 2;
-int green = 3;
+const int blue = 0;
+const int yellow = 1;
+const int red = 2;
+const int green = 3;
 
-int pinSpeaker = 4;
-int pinButton[] = {5, 6, 7, 8};
-int pinLed[] = {9, 10, 11, 12};
+const int pinSpeaker = 4;
+const int pinButton[] = {5, 6, 7, 8};
+const int pinLed[] = {9, 10, 11, 12};
 
-float sound[] = {659.255, 554.365, 440.000, 329.628};
+const float sound[] = {659.255, 554.365, 440.000, 329.628};
 
 int count = 0;
 int values[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
