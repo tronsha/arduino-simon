@@ -45,27 +45,50 @@ void fnGreen(int t) {
   digitalWrite(pinLed[green], LOW);
 }
 
+void allLedOn () {
+  digitalWrite(pinLed[blue], HIGH);
+  digitalWrite(pinLed[yellow], HIGH);
+  digitalWrite(pinLed[red], HIGH);
+  digitalWrite(pinLed[green], HIGH);
+}
+
+void allLedOff () {
+  digitalWrite(pinLed[blue], LOW);
+  digitalWrite(pinLed[yellow], LOW);
+  digitalWrite(pinLed[red], LOW);
+  digitalWrite(pinLed[green], LOW);
+}
+
 void reset() {
   count = 0;
   for (int i = 0; i < 20; i++) {
     values[i] = -1;
+    allLedOn();
+    delay(50);
+    allLedOff();
+    delay(50);
   }
-  fnBlue(1000);
-  fnYellow(1000);
-  fnRed(1000);
-  fnGreen(1000);
   delay(2000);
 }
 
 void lose() {
+  allLedOn();
+  fnBlue(1000);
+  fnYellow(1000);
+  fnRed(1000);
+  fnGreen(1000);
   Serial.println("Oh no...");
-  speedLevel = speedLevel + 200;
+  if (speedLevel <= 1000) {
+    speedLevel = speedLevel + 200;
+  }
   reset();
 }
 
 void win() {
   Serial.println("Very good my master!");
-  speedLevel = speedLevel - 200;
+  if (speedLevel >= 400) {
+    speedLevel = speedLevel - 200;
+  }
   reset();
 }
 
@@ -177,15 +200,11 @@ void setup() {
 }
 
 void loop() {
-  if (digitalRead(pinButton[blue]) == LOW && digitalRead(pinButton[yellow]) == LOW && digitalRead(pinButton[red]) == LOW && digitalRead(pinButton[green]) == LOW) {
-    speedLevel = 1200;
-    reset();
-  }
   values[count] = random(4);
   count++;
   showLeds();
   readButtons();
-  if (count == 20) {
+  if (count == 10) {
     win();
   }
   delay(500);
