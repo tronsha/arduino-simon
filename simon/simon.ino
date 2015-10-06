@@ -1,52 +1,75 @@
+int blue = 0;
+int yellow = 1;
+int red = 2;
+int green = 3;
+
 int pinSpeaker = 4;
+int pinButton[] = {5, 6, 7, 8};
+int pinLed[] = {9, 10, 11, 12};
 
-int pinButtonA = 5;
-int pinButtonB = 6;
-int pinButtonC = 7;
-int pinButtonD = 8;
+float sound[] = {659.255, 554.365, 440.000, 329.628};
 
-int pinLedA = 9;
-int pinLedB = 10;
-int pinLedC = 11;
-int pinLedD = 12;
+int count = 0;
+int values[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
-float blueSound = 659.255;
-float yellowSound = 554.365;
-float redSound = 440.000;
-float greenSound = 329.628;
+void fnBlue(int t) {
+  digitalWrite(pinLed[blue], HIGH);
+  tone(pinSpeaker, sound[blue], t);
+  delay(t);
+  noTone(pinSpeaker);
+  digitalWrite(pinLed[blue], LOW);
+}
+
+void fnYellow(int t) {
+  digitalWrite(pinLed[yellow], HIGH);
+  tone(pinSpeaker, sound[yellow], t);
+  delay(t);
+  noTone(pinSpeaker);
+  digitalWrite(pinLed[yellow], LOW);
+}
+
+void fnRed(int t) {
+  digitalWrite(pinLed[red], HIGH);
+  tone(pinSpeaker, sound[red], t);
+  delay(t);
+  noTone(pinSpeaker);
+  digitalWrite(pinLed[red], LOW);
+}
+
+void fnGreen(int t) {
+  digitalWrite(pinLed[green], HIGH);
+  tone(pinSpeaker, sound[green], t);
+  delay(t);
+  noTone(pinSpeaker);
+  digitalWrite(pinLed[green], LOW);
+}
+
+void reset() {
+  count = 0;
+  for (int i = 0; i < 20; i++) {
+    values[i] = 0;
+  }
+  fnBlue(1000);
+  fnYellow(1000);
+  fnRed(1000);
+  fnGreen(1000);
+}
 
 void setup() {
-  pinMode(pinButtonA, INPUT_PULLUP);
-  pinMode(pinButtonB, INPUT_PULLUP);
-  pinMode(pinButtonC, INPUT_PULLUP);
-  pinMode(pinButtonD, INPUT_PULLUP);
-  pinMode(pinLedA, OUTPUT);
-  pinMode(pinLedB, OUTPUT);
-  pinMode(pinLedC, OUTPUT);
-  pinMode(pinLedD, OUTPUT);
-  digitalWrite(pinLedA, HIGH);
-  tone(pinSpeaker, blueSound, 1000);
-  delay(1000);
-  noTone(pinSpeaker);
-  digitalWrite(pinLedA, LOW);
-  digitalWrite(pinLedB, HIGH);
-  tone(pinSpeaker, yellowSound, 1000);
-  delay(1000);
-  noTone(pinSpeaker);
-  digitalWrite(pinLedB, LOW);
-  digitalWrite(pinLedC, HIGH);
-  tone(pinSpeaker, redSound, 1000);
-  delay(1000);
-  noTone(pinSpeaker);
-  digitalWrite(pinLedC, LOW);
-  digitalWrite(pinLedD, HIGH);
-  tone(pinSpeaker, greenSound, 1000);
-  delay(1000);
-  noTone(pinSpeaker);
-  digitalWrite(pinLedD, LOW);
+  pinMode(pinButton[blue], INPUT_PULLUP);
+  pinMode(pinButton[yellow], INPUT_PULLUP);
+  pinMode(pinButton[red], INPUT_PULLUP);
+  pinMode(pinButton[green], INPUT_PULLUP);
+  pinMode(pinLed[blue], OUTPUT);
+  pinMode(pinLed[yellow], OUTPUT);
+  pinMode(pinLed[red], OUTPUT);
+  pinMode(pinLed[green], OUTPUT);
+  reset();
 }
 
 void loop() {
-
+  if (digitalRead(pinButton[blue]) == LOW && digitalRead(pinButton[yellow]) == LOW && digitalRead(pinButton[red]) == LOW && digitalRead(pinButton[green]) == LOW) {
+    reset();
+  }
+  delay(500);
 }
-
