@@ -98,9 +98,9 @@ void readButtons() {
           }
         }
         pos++;
+        continue;
       }
-    }
-    if (values[pos] == yellow) {
+    } else if (values[pos] == yellow) {
       if (digitalRead(pinButton[blue]) == LOW || digitalRead(pinButton[red]) == LOW || digitalRead(pinButton[green]) == LOW) {
         lose();
       }
@@ -111,9 +111,9 @@ void readButtons() {
           }
         }
         pos++;
+        continue;
       }
-    }
-    if (values[pos] == red) {
+    } else if (values[pos] == red) {
       if (digitalRead(pinButton[blue]) == LOW || digitalRead(pinButton[yellow]) == LOW || digitalRead(pinButton[green]) == LOW) {
         lose();
       }
@@ -124,9 +124,9 @@ void readButtons() {
           }
         }
         pos++;
+        continue;
       }
-    }
-    if (values[pos] == green) {
+    } else if (values[pos] == green) {
       if (digitalRead(pinButton[blue]) == LOW || digitalRead(pinButton[yellow]) == LOW || digitalRead(pinButton[red]) == LOW) {
         lose();
       }
@@ -137,6 +137,7 @@ void readButtons() {
           }
         }
         pos++;
+        continue;
       }
     }
     if (pos == count) {
@@ -146,6 +147,7 @@ void readButtons() {
 }
 
 void setup() {
+  randomSeed(analogRead(0));
   pinMode(pinButton[blue], INPUT_PULLUP);
   pinMode(pinButton[yellow], INPUT_PULLUP);
   pinMode(pinButton[red], INPUT_PULLUP);
