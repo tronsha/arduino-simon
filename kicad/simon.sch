@@ -1,1 +1,196 @@
 EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L ATMEGA328-P IC?
+U 1 1 56819B05
+P 2950 2400
+F 0 "IC?" H 2200 3650 50  0000 L BNN
+F 1 "ATMEGA328-P" H 3350 1000 50  0000 L BNN
+F 2 "DIL28" H 2950 2400 50  0000 C CIN
+F 3 "" H 2950 2400 50  0000 C CNN
+	1    2950 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D?
+U 1 1 5682C58C
+P 7000 1400
+F 0 "D?" H 7000 1500 50  0000 C CNN
+F 1 "LED" H 7000 1300 50  0000 C CNN
+F 2 "" H 7000 1400 50  0000 C CNN
+F 3 "" H 7000 1400 50  0000 C CNN
+	1    7000 1400
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED D?
+U 1 1 5682C66F
+P 7000 1700
+F 0 "D?" H 7000 1800 50  0000 C CNN
+F 1 "LED" H 7000 1600 50  0000 C CNN
+F 2 "" H 7000 1700 50  0000 C CNN
+F 3 "" H 7000 1700 50  0000 C CNN
+	1    7000 1700
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED D?
+U 1 1 5682C6A8
+P 7000 2000
+F 0 "D?" H 7000 2100 50  0000 C CNN
+F 1 "LED" H 7000 1900 50  0000 C CNN
+F 2 "" H 7000 2000 50  0000 C CNN
+F 3 "" H 7000 2000 50  0000 C CNN
+	1    7000 2000
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED D?
+U 1 1 5682C6DA
+P 7000 2300
+F 0 "D?" H 7000 2400 50  0000 C CNN
+F 1 "LED" H 7000 2200 50  0000 C CNN
+F 2 "" H 7000 2300 50  0000 C CNN
+F 3 "" H 7000 2300 50  0000 C CNN
+	1    7000 2300
+	-1   0    0    1   
+$EndComp
+$Comp
+L R R?
+U 1 1 5682C700
+P 6450 1400
+F 0 "R?" V 6530 1400 50  0000 C CNN
+F 1 "R" V 6450 1400 50  0000 C CNN
+F 2 "" V 6380 1400 50  0000 C CNN
+F 3 "" H 6450 1400 50  0000 C CNN
+	1    6450 1400
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 5682C827
+P 6450 1700
+F 0 "R?" V 6530 1700 50  0000 C CNN
+F 1 "R" V 6450 1700 50  0000 C CNN
+F 2 "" V 6380 1700 50  0000 C CNN
+F 3 "" H 6450 1700 50  0000 C CNN
+	1    6450 1700
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 5682C85E
+P 6450 2000
+F 0 "R?" V 6530 2000 50  0000 C CNN
+F 1 "R" V 6450 2000 50  0000 C CNN
+F 2 "" V 6380 2000 50  0000 C CNN
+F 3 "" H 6450 2000 50  0000 C CNN
+	1    6450 2000
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 5682C890
+P 6450 2300
+F 0 "R?" V 6530 2300 50  0000 C CNN
+F 1 "R" V 6450 2300 50  0000 C CNN
+F 2 "" V 6380 2300 50  0000 C CNN
+F 3 "" H 6450 2300 50  0000 C CNN
+	1    6450 2300
+	0    1    1    0   
+$EndComp
+$Comp
+L Earth #PWR?
+U 1 1 5682C917
+P 7600 2700
+F 0 "#PWR?" H 7600 2450 50  0001 C CNN
+F 1 "Earth" H 7600 2550 50  0001 C CNN
+F 2 "" H 7600 2700 50  0000 C CNN
+F 3 "" H 7600 2700 50  0000 C CNN
+	1    7600 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 1400 6800 1400
+Wire Wire Line
+	6600 1700 6800 1700
+Wire Wire Line
+	6600 2000 6800 2000
+Wire Wire Line
+	6600 2300 6800 2300
+Wire Wire Line
+	7600 2700 7600 1400
+Wire Wire Line
+	7600 1400 7200 1400
+Wire Wire Line
+	7200 1700 7600 1700
+Connection ~ 7600 1700
+Wire Wire Line
+	7200 2000 7600 2000
+Connection ~ 7600 2000
+Wire Wire Line
+	7200 2300 7600 2300
+Connection ~ 7600 2300
+Wire Wire Line
+	3950 1400 6300 1400
+Wire Wire Line
+	3950 1500 6200 1500
+Wire Wire Line
+	6200 1500 6200 1700
+Wire Wire Line
+	6200 1700 6300 1700
+Wire Wire Line
+	3950 1600 6100 1600
+Wire Wire Line
+	6100 1600 6100 2000
+Wire Wire Line
+	6100 2000 6300 2000
+Wire Wire Line
+	3950 1700 6000 1700
+Wire Wire Line
+	6000 1700 6000 2300
+Wire Wire Line
+	6000 2300 6300 2300
+$EndSCHEMATC
