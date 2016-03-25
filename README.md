@@ -1,7 +1,7 @@
 Arduino Simon
 =============
 
-![](simon.svg)
+![](simon.png)
 
 ## IDE
 
