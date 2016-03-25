@@ -1,6 +1,8 @@
 Arduino Simon
 =============
 
+![](simon.svg)
+
 ## IDE
 
 * [Arduino Software][3]
