@@ -35,8 +35,8 @@ $Descr A4 8268 11693 portrait
 encoding utf-8
 Sheet 1 1
 Title "Simon"
-Date "2016-01-03"
-Rev "0.1"
+Date "2016-03-25"
+Rev "0.2"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -241,7 +241,7 @@ L C C1
 U 1 1 56840AC3
 P 3950 4950
 F 0 "C1" H 3975 5050 50  0000 L CNN
-F 1 "22pF" H 3975 4850 50  0000 L CNN
+F 1 "100nF" H 3975 4850 50  0000 L CNN
 F 2 "" H 3988 4800 50  0000 C CNN
 F 3 "" H 3950 4950 50  0000 C CNN
 	1    3950 4950
