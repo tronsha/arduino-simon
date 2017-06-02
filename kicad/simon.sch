@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:simon-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -55,7 +56,7 @@ F 3 "" H 2450 3100 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED D1
+L LED-RESCUE-simon D1
 U 1 1 5682C58C
 P 6500 2100
 F 0 "D1" H 6500 2200 50  0000 C CNN
@@ -66,7 +67,7 @@ F 3 "" H 6500 2100 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L LED D2
+L LED-RESCUE-simon D2
 U 1 1 5682C66F
 P 6500 2400
 F 0 "D2" H 6500 2500 50  0000 C CNN
@@ -77,7 +78,7 @@ F 3 "" H 6500 2400 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L LED D3
+L LED-RESCUE-simon D3
 U 1 1 5682C6A8
 P 6500 2700
 F 0 "D3" H 6500 2800 50  0000 C CNN
@@ -88,7 +89,7 @@ F 3 "" H 6500 2700 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L LED D4
+L LED-RESCUE-simon D4
 U 1 1 5682C6DA
 P 6500 3000
 F 0 "D4" H 6500 3100 50  0000 C CNN
@@ -213,7 +214,7 @@ L R R1
 U 1 1 5683FEFD
 P 2450 1600
 F 0 "R1" V 2530 1600 50  0000 C CNN
-F 1 "1KΩ" V 2450 1600 50  0000 C CNN
+F 1 "10KΩ" V 2450 1600 50  0000 C CNN
 F 2 "" V 2380 1600 50  0000 C CNN
 F 3 "" H 2450 1600 50  0000 C CNN
 	1    2450 1600
