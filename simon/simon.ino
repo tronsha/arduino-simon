@@ -27,6 +27,13 @@ void outputLight(byte id) {
   digitalWrite(lights[id].led, LOW);
 }
 
+void outputLights() {
+  for (int i = 0; i < count; i++) {
+    outputLight(values[i]);
+    delay(200);
+  }
+}
+
 void allLedOn () {
   digitalWrite(lights[0].led, HIGH);
   digitalWrite(lights[1].led, HIGH);
@@ -56,13 +63,6 @@ void lose() {
 void win() {
   Serial.println("Very good my master!");
   reset();
-}
-
-void showLeds() {
-  for (int i = 0; i < count; i++) {
-    outputLight(values[i]);
-    delay(200);
-  }
 }
 
 void readButtons() {
@@ -153,7 +153,7 @@ void setup() {
 void loop() {
   values[count] = random(4);
   count++;
-  showLeds();
+  outputLights();
   readButtons();
   if (count == 100) {
     win();
